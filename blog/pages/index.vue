@@ -1,28 +1,26 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        Blog
-      </h1>
-      <h2 class="subtitle">
-        yoshida luna
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="tableOfContnts">
+    <div class="mainContents">
+      <div class="v_line_left">
+        <div class="border"></div>
+        <h2 class="title">
+          TABLE OF CONTENTS
+        </h2>
+
+        <ul class="link">
+          <li>
+            <p>
+              <a class="tablelink" href="profile.html">PROFILE</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a class="tablelink" href="monthBlog.html">BLOG</a>
+            </p>
+          </li>
+        </ul>
+
+        <div class="border"></div>
       </div>
     </div>
   </div>
@@ -39,34 +37,70 @@ export default {
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+body {
+  background-color: rgb(98, 140, 186);
+  display: block;
+  margin: 8px;
+}
+
+.v_line_left {
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  padding-left: 0px;
+}
+
+.border {
+  border-bottom: solid 1px #000;
+}
+
+.mainContents {
+  position: relative;
+  margin: 20px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-color: rgb(243, 178, 172);
+  font-weight: 700;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.tableOfContnts ul {
+  list-style: none;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+.tablelink {
+  position: relative;
+  color: rgb(164, 187, 214);
+  -webkit-text-stroke: 1px rgb(54, 72, 94);
+  background: linear-gradient(#f3b2ac, #ea7775);
+  text-decoration-color: rgb(98, 140, 186);
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  position: relative;
+  padding-left: 20px;
+  color: rgb(164, 187, 214);
+  -webkit-text-stroke: 1px rgb(54, 72, 94);
+  font-size: 24px;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
