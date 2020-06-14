@@ -23,6 +23,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/css/profile.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -70,6 +71,11 @@ export default {
         name: 'mBlog',
         path: '/mBlog',
         component: 'pages/mBlog.vue'
+      },
+      {
+        name: 'profile',
+        path: '/profile',
+        component: 'pages/profile.vue'
       }
     ]
   }
