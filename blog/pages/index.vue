@@ -15,7 +15,7 @@
           </li>
           <li>
             <p>
-              <nuxt-link class="tablelink" to="/mBlog.vue">BLOG</nuxt-link>
+              <nuxt-link class="tablelink" to="/mBlog" >BLOG</nuxt-link>
               <!-- <a class="tablelink" href="@/blog/pages/mBlog.vue">BLOG</a> -->
             </p>
           </li>
@@ -31,6 +31,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  name: "TABLE",
   components: {
     Logo
   }

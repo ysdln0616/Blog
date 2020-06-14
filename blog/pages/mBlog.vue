@@ -4,7 +4,7 @@
       <div class="v_line_left">
         <div class="border"></div>
         <h2 class="title">
-          TABLE OF CONTENTS
+          TABLE OF
         </h2>
 
         <ul class="link">
@@ -30,6 +30,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+    name: "mBlog",
   components: {
     Logo
   }

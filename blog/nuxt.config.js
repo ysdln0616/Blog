@@ -57,5 +57,20 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  router: {
+    base: '/main/',
+    routes: [
+      {
+        name: 'TABLE',
+        path: '/',
+        component: 'pages/index.vue'
+      },
+      {
+        name: 'mBlog',
+        path: '/mBlog',
+        component: 'pages/mBlog.vue'
+      }
+    ]
   }
 }
