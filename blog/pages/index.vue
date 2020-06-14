@@ -15,7 +15,7 @@
           </li>
           <li>
             <p>
-              <a class="tablelink" href="monthBlog.html">BLOG</a>
+              <a class="tablelink" href="Blog.vue">BLOG</a>
             </p>
           </li>
         </ul>
@@ -41,6 +41,9 @@ body {
   background-color: rgb(98, 140, 186);
   display: block;
   margin: 8px;
+  font-family: 'Hiragino Kaku Gothic', 'ProN';
+  word-spacing: 0;
+
 }
 
 .v_line_left {
@@ -82,25 +85,23 @@ p {
 .tablelink {
   position: relative;
   color: rgb(164, 187, 214);
-  -webkit-text-stroke: 1px rgb(54, 72, 94);
+  -webkit-text-stroke: 0.8px rgb(54, 72, 94);
   background: linear-gradient(#f3b2ac, #ea7775);
   text-decoration-color: rgb(98, 140, 186);
   font-size: 24px;
-  font-weight: 700;
 }
 
 .title {
   position: relative;
   padding-left: 20px;
   color: rgb(164, 187, 214);
-  -webkit-text-stroke: 1px rgb(54, 72, 94);
+  -webkit-text-stroke: 0.8px rgb(54, 72, 94);
   font-size: 24px;
   display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 </style>
