@@ -60,7 +60,6 @@ export default {
     }
   },
   router: {
-    // base: '/main/',
     routes: [
       {
         name: 'TABLE',

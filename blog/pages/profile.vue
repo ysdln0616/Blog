@@ -38,9 +38,7 @@
         </div>
         <div>
           <p>
-            <a class="backPreparge" href="index.html">
-              ←TABLE OF CONTENTS
-            </a>
+              <nuxt-link class="backPrePage" to="/">TABLE OF CONTENTS</nuxt-link>
           </p>
         </div>
         <div class="border"></div>
@@ -85,7 +83,7 @@ body {
   text-decoration-color: rgb(98, 140, 186);
 }
 
-.backPreparge {
+.backPrePage {
   color: rgb(164, 187, 214);
   -webkit-text-stroke: 0.8px rgb(54, 72, 94);
   background: linear-gradient(#f3b2ac, #ea7775);
