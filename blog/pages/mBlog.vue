@@ -15,8 +15,7 @@
           </li>
           <li>
             <p>
-              <nuxt-link class="tablelink" to="/mBlog.vue">BLOG</nuxt-link>
-              <!-- <a class="tablelink" href="@/blog/pages/mBlog.vue">BLOG</a> -->
+              <a class="tablelink" href="Blog.vue">BLOG</a>
             </p>
           </li>
         </ul>
