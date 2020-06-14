@@ -3,10 +3,10 @@
     <div>
       <logo />
       <h1 class="title">
-        blog
+        Blog
       </h1>
       <h2 class="subtitle">
-        My smashing Nuxt.js project
+        yoshida luna
       </h2>
       <div class="links">
         <a
