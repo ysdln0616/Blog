@@ -3,19 +3,19 @@
     <div class="mainContents">
       <div class="v_line_left">
         <div class="border"></div>
-        <h2 class="title">
+        <div class="title">
           TABLE OF CONTENTS
-        </h2>
+        </div>
 
-        <ul class="link">
+        <ul class="links">
           <li>
             <p>
-              <nuxt-link class="tablelink" to="/profile">PROFILE</nuxt-link>
+              <nuxt-link class="moveLink" to="/profile">PROFILE</nuxt-link>
             </p>
           </li>
           <!-- <li>
             <p>
-              <nuxt-link class="tablelink" to="/mBlog" >BLOG</nuxt-link>
+              <nuxt-link class="moveLink" to="/mBlog" >BLOG</nuxt-link>
             </p>
           </li> -->
         </ul>
@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
   name: "TABLE"
@@ -44,18 +43,15 @@ body {
 
 .mainContents {
   background-color: rgb(243, 178, 172);
+  color: rgb(164, 187, 214);
+  -webkit-text-stroke: 0.8px rgb(54, 72, 94);
 }
 
-.tablelink {
+.moveLink {
   color: rgb(164, 187, 214);
   -webkit-text-stroke: 0.8px rgb(54, 72, 94);
   background: linear-gradient(#f3b2ac, #ea7775);
   text-decoration-color: rgb(98, 140, 186);
-}
-
-.title {
-  color: rgb(164, 187, 214);
-  -webkit-text-stroke: 0.8px rgb(54, 72, 94);
 }
 
 </style>
