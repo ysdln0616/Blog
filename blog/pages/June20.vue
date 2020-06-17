@@ -5,10 +5,10 @@
     </div>
     <ul v-if = "top" class="links">
       <li v-for="info in blogs" :key="info">
-        <p>
+        <!-- <p> -->
           <a class="mDate">{{ info.date }}</a>
           <a  class="perLink" v-on:click="topTitle = info.title,top = false,date = info.date">{{ info.title }}</a>
-        </p>
+        <!-- </p> -->
       </li>
     </ul>
 
@@ -40,7 +40,7 @@
         <nuxt-link class="perLink" to="/mBlog">←BLOG</nuxt-link>
       </p>
       <p v-else class="back">
-        <a class="perLink" v-on:click="topTitle='2020年6月のブログ',top=true">←2020年6月のブログ</a>
+        <a class="perLink" v-on:click="topTitle='2020年6月のブログ',top=true">←2020年6月</a>
       </p>  
     </div>
   </div>
@@ -64,7 +64,7 @@ export default {
           date:'20200614'
         }
       ],
-      topTitle: '2020年6月のブログ',
+      topTitle: '2020年6月',
       date: '',
     }
   }
