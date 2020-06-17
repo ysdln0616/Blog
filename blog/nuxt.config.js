@@ -88,9 +88,9 @@ export default {
         component: 'pages/mBlog.vue'
       },
       {
-        name: 'June20',
-        path: '/June20',
-        component: 'pages/June20.vue'
+        name: "Blog-June20-id",
+        path: '/Blog/June20/:id?',
+        component: 'pages/Blog/Juna20/_id.vue'
       }
     ]
   

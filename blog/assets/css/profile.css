@@ -94,6 +94,7 @@ p {
 }
 
 .perLink {
+  cursor: pointer;
   color: rgb(164, 187, 214);
   -webkit-text-stroke: 0.8px rgb(54, 72, 94);
   background: linear-gradient(#f3b2ac, #ea7775);

@@ -3,10 +3,10 @@
     <div class="title">
       BLOG
     </div>
-    <ul>
+    <ul class="links">
       <li>
         <p>
-          <nuxt-link class="perLink" to="/June20">2020年6月</nuxt-link>
+          <nuxt-link class="perLink" to="/Blog/June20">2020年6月</nuxt-link>
         </p>
       </li>
       <!-- <li>
