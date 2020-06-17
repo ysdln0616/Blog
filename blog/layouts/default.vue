@@ -1,15 +1,19 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="mainContents">
+    <div class="v_line_left">
+      <div class="border"></div>
+      <nuxt />
+      <div class="border"></div>
+    </div>
   </div>
 </template>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
+  background-color: rgb(98, 140, 186);
+  display: block;
+  font-family: 'Hiragino Kaku Gothic', 'ProN';
+  word-spacing: 0;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -17,39 +21,13 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
+.mainContents {
+  background-color: rgb(243, 178, 172);
+  color: rgb(164, 187, 214);
+  -webkit-text-stroke: 0.8px rgb(54, 72, 94);
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.mainContents dt {
+  color: rgb(98, 140, 186);
 }
 </style>

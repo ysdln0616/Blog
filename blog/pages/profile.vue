@@ -1,11 +1,9 @@
 <template>
-    <div class="mainContents">
-      <div class="v_line_left">
-        <div class="border"></div>
-        <div class="title">
-          PROFILE
-        </div>
-        <dt>
+    <div>
+      <div class="title">
+        PROFILE
+      </div>
+      <dt>
           <p>
             るな子
           </p>
@@ -39,8 +37,6 @@
           <p class="back">
               <nuxt-link class="perLink" to="/">←TABLE OF CONTENTS</nuxt-link>
           </p>
-        </div>
-        <div class="border"></div>
       </div>
 </template>
 
@@ -51,34 +47,3 @@ export default {
 }
 import '@/assets/css/profile.css'
 </script>
-
-<style>
-body {
-  background-color: rgb(98, 140, 186);
-}
-.mainContents {
-  background-color: rgb(243, 178, 172);
-  color: rgb(164, 187, 214);
-  -webkit-text-stroke: 0.8px rgb(54, 72, 94);
-}
-
-.mainContents dt {
-  color: rgb(98, 140, 186);
-}
-
-.perLink {
-  color: rgb(164, 187, 214);
-  -webkit-text-stroke: 0.8px rgb(54, 72, 94);
-  background: linear-gradient(#f3b2ac, #ea7775);
-  text-decoration-color: rgb(98, 140, 186);
-}
-
-.SNSLink {
-  background-color: rgb(234, 154, 147);
-}
-
-.SNSLink .perLink{
-    background: linear-gradient(rgb(234, 154, 147), #ea7775);
-}
-
-</style>
