@@ -12,7 +12,7 @@
 html {
   background-color: rgb(98, 140, 186);
   display: block;
-  font-family: 'Hiragino Kaku Gothic', 'ProN';
+  font-family: 'Hiragino Kaku Gothic', 'ProN',sans-serif;
   word-spacing: 0;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

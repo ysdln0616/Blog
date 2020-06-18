@@ -5,8 +5,13 @@
     </div>
     <ul class="links">
       <li v-for="info in blogs" :key="info">
+        <p>
+          <!-- <a class="mDate">{{ info.date }}</a> -->
+          <div>
+            <nuxt-link  class="perLink" :to= "{path:`/Blog/June20/${info.id}`,query:{title:`${info.title}`,date:`${info.date}`,id:`${info.id}`}}">{{ info.title }}</nuxt-link>
+          </div>
           <a class="mDate">{{ info.date }}</a>
-          <nuxt-link  class="perLink" :to= "{path:`/Blog/June20/${info.id}`,query:{title:`${info.title}`,date:`${info.date}`,id:`${info.id}`}}">{{ info.title }}</nuxt-link>
+        </p>
       </li>
     </ul>
 
@@ -26,14 +31,19 @@ export default {
   data() {
     return{
       blogs:[
+         {
+          title: "私の人生 enjoy!",
+          date:'2020-06-19',
+          id:'19'
+        },
         {
           title: "swift　テトリスもどき　その...?",
-          date:'20200606',
+          date:'2020-06-06',
           id:'06'
         },
         {
           title: "Nuxt",
-          date:'20200614',
+          date:'2020-06-14',
           id:'14'
         }
       ],
