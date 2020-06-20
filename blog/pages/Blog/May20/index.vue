@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class = "title">
-      2020年6月
+      2020年5月
     </div>
     <ul class="links">
       <li v-for="info in blogs" :key="info">
@@ -25,13 +25,13 @@
 <script>
 
 export default {
-  name: "June20",
+  name: "May20",
   layout: 'default',
   computed: {
     blogs:function(){
       var month=[];
       for(var i=0;i<this.$store.getters['blogsData'].length;i++){
-        if(this.$store.getters['blogsData'][i].month == "June20"){
+        if(this.$store.getters['blogsData'][i].month == "May20"){
           month.push(this.$store.getters['blogsData'][i])
         }
       }

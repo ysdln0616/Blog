@@ -70,30 +70,30 @@ export default {
     extend (config, ctx) {
     }
   },
-  router: {
-    routes: [
-      {
-        name: 'index',
-        path: '/',
-        component: 'pages/index.vue'
-      },
-      {
-        name: 'profile',
-        path: '/profile',
-        component: 'pages/profile.vue'
-      },
-      {
-        name: 'mBlog',
-        path: '/mBlog',
-        component: 'pages/mBlog.vue'
-      },
-      {
-        name: "Blog-June20-id",
-        path: '/Blog/June20/:id?',
-        component: 'pages/Blog/Juna20/_id.vue'
-      }
-    ]
+  // router: {
+  //   routes: [
+  //     {
+  //       name: 'index',
+  //       path: '/',
+  //       component: 'pages/index.vue'
+  //     },
+  //     {
+  //       name: 'profile',
+  //       path: '/profile',
+  //       component: 'pages/profile.vue'
+  //     },
+  //     {
+  //       name: 'BLOG',
+  //       path: '/BLOG',
+  //       component: 'pages/BLOG.vue'
+  //     },
+  //     {
+  //       name: "Blog-June20-id",
+  //       path: '/Blog/June20/:id?',
+  //       component: 'pages/Blog/Juna20/_id.vue'
+  //     }
+  //   ]
   
-  }
+  // }
 }
 

@@ -83,13 +83,12 @@ export default {
   layout: 'default',
   computed: {
     blogs:function(){
-      console.log(this.$route.params['id'])
       for(var i=0;i<this.$store.getters['blogsData'].length;i++){
-        if(this.$store.getters['blogsData'][i].id == this.$route.params['id']){
+        if(this.$store.getters['blogsData'][i].month == "June20" && this.$store.getters['blogsData'][i].id == this.$route.params['id']){
           return this.$store.getters['blogsData'][i]
         }
       }
-    },
+    }
   }
 }
 
