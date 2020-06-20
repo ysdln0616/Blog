@@ -38,6 +38,7 @@
               <nuxt-link class="perLink" to="/">←TABLE OF CONTENTS</nuxt-link>
           </p>
       </div>
+    </div>
 </template>
 
 <script>
