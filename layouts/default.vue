@@ -2,7 +2,7 @@
   <div class="mainContents">
     <div class="v_line_left">
       <div class="border"></div>
-      <nuxt />
+        <nuxt />
       <div class="border"></div>
     </div>
   </div>

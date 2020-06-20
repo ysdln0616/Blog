@@ -65,7 +65,7 @@
 
         <div>
             <p class="back">
-                <nuxt-link class="perLink" to="/Blog/June19">←2019年6月</nuxt-link>
+                <nuxt-link class="perLink" to="/blog/June19">←2019年6月</nuxt-link>
             </p>
         </div>   
     </div>

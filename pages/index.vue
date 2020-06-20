@@ -11,7 +11,7 @@
       </li>
       <li>
         <p>
-          <nuxt-link class="perLink" to="/BLOG" >BLOG</nuxt-link>
+          <nuxt-link class="perLink" to="/blog" >BLOG</nuxt-link>
         </p>
       </li>
     </ul>

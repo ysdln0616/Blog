@@ -7,7 +7,7 @@
       <li v-for="info in blogs" :key="info">
         <p>
             <nuxt-link  class="perLink"
-             :to= "{path:`/Blog/${info.month}/${info.id}`}"
+             :to= "{path:`/blog/${info.month}/${info.id}`}"
              >{{ info.title }}</nuxt-link>
             <a class="mDate">{{ info.date }}</a>
         </p>
@@ -16,7 +16,7 @@
 
     <div>
       <p class="back">
-        <nuxt-link class="perLink" to="/Blog">←BLOG</nuxt-link>
+        <nuxt-link class="perLink" to="/blog">←BLOG</nuxt-link>
       </p>
     </div>
   </div>

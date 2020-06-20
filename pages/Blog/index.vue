@@ -7,7 +7,7 @@
     <ul class="links">
       <li v-for="info in monthes" :key="info">
         <p>
-          <nuxt-link  class="perLink" :to= "{path:`/Blog/${info.to}`}">
+          <nuxt-link  class="perLink" :to= "{path:`/blog/${info.to}`}">
           {{ info.title }}</nuxt-link>
         </p>
       </li>
