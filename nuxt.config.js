@@ -17,7 +17,7 @@ export default {
       { property: "og:url",content: "https://ysdln0616-blog.netlify.app"},
       { property: "og:title", content: "BLOG"},
       { property: "og:description", content: "Mysite"},
-      { property: "og:image",content: "https://ysdln0616.github.io/mysite/favicon/faviconM.png"},
+      { property: "og:image",content: "/favicon.png"},
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
@@ -70,30 +70,5 @@ export default {
     extend (config, ctx) {
     }
   },
-  // router: {
-  //   routes: [
-  //     {
-  //       name: 'index',
-  //       path: '/',
-  //       component: 'pages/index.vue'
-  //     },
-  //     {
-  //       name: 'profile',
-  //       path: '/profile',
-  //       component: 'pages/profile.vue'
-  //     },
-  //     {
-  //       name: 'BLOG',
-  //       path: '/BLOG',
-  //       component: 'pages/BLOG.vue'
-  //     },
-  //     {
-  //       name: "Blog-June20-id",
-  //       path: '/Blog/June20/:id?',
-  //       component: 'pages/Blog/Juna20/_id.vue'
-  //     }
-  //   ]
-  
-  // }
 }
 
