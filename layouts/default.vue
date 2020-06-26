@@ -21,7 +21,6 @@ html {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
   max-width: 960px;
 }
 
