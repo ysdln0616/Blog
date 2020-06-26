@@ -17,13 +17,17 @@
       <li v-for="info in blogs" :key="info">
         <div class="border"></div>
         <p>
-            <nuxt-link   class="perLink"
-             :to= "{path:`/blog/archive/${info.month}/${info.id}`}"
-             >{{ info.title }}</nuxt-link>
-            <a class="mDate">{{ info.date }}</a>
+          <nuxt-link   class="perLink"
+           :to= "{path:`/blog/archive/${info.month}/${info.id}`}"
+           >{{ info.title }}</nuxt-link>
+          <a class="mDate">{{ info.date }}</a>
         </p>
       </li>
       <div class="border"></div>
+      <div class="Bar">
+        <nuxt-link v-if="bePre" class="preBar" :to= "{path:`/blog/archive/${preMonth.to}`}">←{{preMonth.title}}</nuxt-link>
+        <nuxt-link v-if="beNext" class="nextBar" :to= "{path:`/blog/archive/${nextMonth.to}`}">{{nextMonth.title}}→</nuxt-link>
+      </div>
       
     </ul>
 

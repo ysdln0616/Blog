@@ -6,9 +6,9 @@
 
     <ul class="links">
       <li v-for="info in monthes" :key="info">
-            <p>
-                <nuxt-link  class="perLink" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-            </p>
+        <p>
+          <nuxt-link  class="perLink" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
+        </p>
       </li>
     </ul>
 
@@ -16,18 +16,16 @@
       <div class="new">{{monthes[0].title}}</div>
       <li v-for="info in blogs" :key="info">
         <div v-if="info.month==monthes[0].to">
-        <div class="border"></div>
-        <p>
+          <div class="border"></div>
+          <p>
             <a  v-if="info==blogs[0]" class="new">new</a>
             <nuxt-link   class="perLink"
-             :to= "{path:`/blog/archive/${info.month}/${info.id}`}"
-             >{{ info.title }}</nuxt-link>
+              :to= "{path:`/blog/archive/${info.month}/${info.id}`}">{{ info.title }}</nuxt-link>
             <a class="mDate">{{ info.date }}</a>
-        </p>
+          </p>
         </div>
       </li>
       <div class="border"></div>
-      
     </ul>
 
     <div>
