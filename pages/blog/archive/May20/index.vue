@@ -14,7 +14,7 @@
 
     <ul  class="links">
       <div class="new">2020年5月</div>
-      <li v-for="info in shoeBlogs" :key="info">
+      <li v-for="info in showBlogs" :key="info">
         <div class="border"></div>
         <p>
           <!-- <a  v-if="info==blogs[0]" class="new">new</a> -->
