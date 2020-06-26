@@ -1,5 +1,4 @@
 body {
-  display: block;
   font-family: 'Hiragino Kaku Gothic', 'ProN';
   word-spacing: 0;
 }
@@ -21,6 +20,56 @@ body {
   background-repeat: no-repeat;
   font-weight: 700;
   font-size: 24px;
+}
+
+.menu {
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  margin-left:  10px;
+  margin-right:  10px;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.nowMenu {
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  margin-left:  10px;
+  margin-right:  10px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.new{
+  color: rgb(54, 72, 94);
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.nowPage{
+  color: rgb(54, 72, 94);
+  font-weight: 300;
+  font-size: 16px;
+  background: linear-gradient(rgb(234, 154, 147), #ea7775);
+}
+
+.preBar{
+  color: rgb(54, 72, 94);
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.nextBar{
+  color: rgb(54, 72, 94);
+  font-weight: 300;
+  font-size: 16px;
+  float: right;  
+}
+
+.Bar{
+  display: flex;
+  justify-content: space-between;
+  text-overflow: ellipsis;
 }
 
 p {
@@ -81,12 +130,14 @@ p {
   top: 0px;
   left: 0px;
   padding-left: 50px;
+  padding-right: 50px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .title {
   padding-left: 20px;
+  padding-right: 20px;
   margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0px;

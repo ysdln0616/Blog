@@ -7,7 +7,7 @@ export const state = () => ({
       id:'19'
     },
     {
-      title: "swift　テトリスもどき　その...?",
+      title: "swiftris　その...?",
       month:"June20",
       date:'2020-06-06',
       id:'06'
@@ -54,7 +54,7 @@ export const state = () => ({
       date:'2019-05-31',
       month:"May19",
       id:'31'
-    }
+    },
   ],
 
   monthes:[
@@ -74,7 +74,7 @@ export const state = () => ({
       to:"May19",
       title:"2019年5月"
     }
-  ]
+  ],
 })
 
 export const getters = {

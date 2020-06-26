@@ -19,6 +19,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 960px;
+}
+
+body {
+  margin-top: 40px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .mainContents {

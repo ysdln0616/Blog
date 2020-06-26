@@ -1,16 +1,24 @@
 <template>
   <div>
     <div class = "title">
-      <div>
-      {{blogs.title}}
-      </div>
-      <a class="mDate">{{ blogs.date }}</a>
+      <nuxt-link  :to= "{path:`/blog/entrylist`}" class = "preBar" >BLOG</nuxt-link>
+      <nuxt-link  :to= "{path:`/blog/archive/June20`}" class = "preBar" >2020年6月</nuxt-link>
+      <div class="border"></div>
+    </div>
+    
+    <div class = "title">
+      <div>{{showBlogs.title}}</div>
+      <a class="mDate">{{ showBlogs.date }}</a>
+      <div class="Bar">
+        <nuxt-link v-if="bePre" class="preBar" :to= "{path:`/blog/archive/${preBlog.month}/${preBlog.id}`}">←{{preBlog.title}}</nuxt-link>
+        <nuxt-link v-if="beNext" class="nextBar" :to= "{path:`/blog/archive/${nextBlog.month}/${nextBlog.id}`}">{{nextBlog.title}}→</nuxt-link>
+     </div>
     </div>
      
      <!-- 20200619 -->
     <div v-if="this.$route.params['id']  == '19'" class="document">
-      <h4>今年の6月16日に20際になりました。</h4>
-      <h4>小さい頃は20際になる瞬間がくるなんて信じられなかったんですけど、ほんとになるんですね。</h4>
+      <h4>今年の6月16日に20才になりました。</h4>
+      <h4>小さい頃は20才になる瞬間がくるなんて信じられなかったんですけど、ほんとになるんですね。</h4>
       
       <div class="border"></div>
       <h4>私は毎年毎年、人間的に成長するための目標を立てています。</h4>
@@ -65,13 +73,14 @@
       <h4>しんどいです。</h4>
     </div>
 
-    <div>
-      <p class="back">
-        <nuxt-link class="perLink" to="/blog/June20">←2020年6月</nuxt-link>
-      </p>
+<!-- ページ移動の -->
+    <div class="title">
+      <div class="border"></div>
+      <div class="Bar">
+        <nuxt-link v-if="bePre" class="preBar" :to= "{path:`/blog/archive/${preBlog.month}/${preBlog.id}`}">←{{preBlog.title}}</nuxt-link>
+        <nuxt-link v-if="beNext" class="nextBar" :to= "{path:`/blog/archive/${nextBlog.month}/${nextBlog.id}`}">{{nextBlog.title}}→</nuxt-link>
+      </div>
     </div>
-
-    
   </div>
 </template>
 
@@ -80,14 +89,56 @@
 export default {
   name: "June20-id",
   layout: 'default',
+  data:function(){
+    return{
+      bePre:true,
+      beNext:true
+    }
+  },
   computed: {
     blogs:function(){
+      var blogs=[];
       for(var i=0;i<this.$store.getters['blogsData'].length;i++){
-        if(this.$store.getters['blogsData'][i].month == "June20" && this.$store.getters['blogsData'][i].id == this.$route.params['id']){
-          return this.$store.getters['blogsData'][i]
+        blogs.push(this.$store.getters['blogsData'][i])
+      }
+      blogs.sort(function(a,b){
+        if( a.date > b.date ) return 1;
+        if( a.date < b.date ) return -1;
+        return 0;
+      });
+      return blogs
+    },
+    showBlogs:function(){
+      for(var i=0;i<this.blogs.length;i++){
+        if(this.blogs[i].month == "June20" && this.blogs[i].id == this.$route.params['id']){
+          return this.blogs[i]
         }
       }
-    }
+    },
+    preBlog:function(){
+      for(var i=0;i<this.blogs.length;i++){
+        if(this.blogs[i]==this.showBlogs){
+          if(i!=0){
+            return this.blogs[i-1]
+          }else{
+            this.bePre=false
+            return this.blogs[0]
+          }
+        }
+      }
+    },
+    nextBlog:function(){
+      for(var i=0;i<this.blogs.length;i++){
+        if(this.blogs[i]==this.showBlogs){
+          if(i+1<this.blogs.length){
+            return this.blogs[i+1]
+          }else{
+            this.beNext=false
+            return this.blogs[0]
+          }
+        }
+      }
+    },
   }
 }
 
