@@ -45,23 +45,36 @@
 export default {
   name: "May20",
   layout: 'default',
+  data:function(){
+    return{
+      bePre:true,
+      beNext:true
+    }
+  },
   computed: {
     blogs:function(){
-      var month=[];
+      var arrayBlogs=[];
       for(var i=0;i<this.$store.getters['blogsData'].length;i++){
-        if(this.$store.getters['blogsData'][i].month == "May20"){
-          month.push(this.$store.getters['blogsData'][i])
-        }
+        arrayBlogs.push(this.$store.getters['blogsData'][i])
       }
-      month.sort(function(a,b){
-        if( a.id > b.id ) return -1;
-        if( a.id < b.id ) return 1;
+      arrayBlogs.sort(function(a,b){
+        if( a.date > b.date ) return -1;
+        if( a.date < b.date ) return 1;
         return 0;
       });
-      return month
+      return arrayBlogs
+    },
+    showBlogs:function(){
+      var arrayShowBlogs=[]
+      for(var i=0;i<this.blogs.length;i++){
+        if(this.blogs[i].month == "May19"){
+          arrayShowBlogs.push(this.blogs[i])
+        }
+      }
+      return arrayShowBlogs
     },
     monthes:function(){
-      var blog = []
+      var arrayMonth = []
       for(var i=0;i<this.$store.getters['monthes'].length;i++){
         var blogCount=0;
         for(var j=0;j<this.$store.getters['blogsData'].length;j++){
@@ -69,7 +82,7 @@ export default {
             blogCount+=1;
           }
         }
-        blog.push(
+        arrayMonth.push(
           {
             to:this.$store.getters['monthes'][i].to,
             title:this.$store.getters['monthes'][i].title,
@@ -77,7 +90,38 @@ export default {
           }
         )
       }
-      return blog
+      return arrayMonth
+    },
+    preMonth:function(){
+      for(var i=0;i<this.$store.getters['monthes'].length;i++){
+        if(this.$store.getters['monthes'][i].to=="May19"){
+          if(i+1<this.$store.getters['monthes'].length){
+            return this.$store.getters['monthes'][i+1]
+          }else{
+            this.bePre=false
+            return this.$store.getters['monthes'][0]
+          }
+        }
+      }
+    },
+    nextMonth:function(){
+      for(var i=0;i<this.$store.getters['monthes'].length;i++){
+        if(this.$store.getters['monthes'][i].to=="May19"){
+          if(i!=0){
+            return this.$store.getters['monthes'][i-1]
+          }else{
+            this.beNext=false
+            return this.$store.getters['monthes'][0]
+          }
+        }
+      }
+    },    
+    preBlog:function(){
+      for(var i=0;i<this.blogs.length;i++){
+        if(this.blogs[i]==this.showBlogs){
+          return this.blogs[i-1]
+        }
+      }
     }
   }
 }

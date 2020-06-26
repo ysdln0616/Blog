@@ -6,23 +6,22 @@
 
     <ul class="links">
       <li v-for="info in monthes" :key="info">
-            <p>
-                <nuxt-link  class="perLink" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-            </p>
+        <p>
+          <nuxt-link  class="perLink" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
+        </p>
       </li>
     </ul>
 
     <ul  class="links">
-      
       <div class="new">2019年5月</div>
       <li v-for="info in showBlogs" :key="info">
         <div class="border"></div>
         <p>
-            <a  v-if="info==blogs[0]" class="new">new</a>
-            <nuxt-link   class="perLink"
-             :to= "{path:`/blog/archive/${info.month}/${info.id}`}"
-             >{{ info.title }}</nuxt-link>
-            <a class="mDate">{{ info.date }}</a>
+          <a  v-if="info==blogs[0]" class="new">new</a>
+          <nuxt-link   class="perLink"
+           :to= "{path:`/blog/archive/${info.month}/${info.id}`}"
+           >{{ info.title }}</nuxt-link>
+          <a class="mDate">{{ info.date }}</a>
         </p>
       </li>
       <div class="border"></div>
@@ -30,7 +29,6 @@
         <nuxt-link v-if="bePre" class="preBar" :to= "{path:`/blog/archive/${preMonth.to}`}">←{{preMonth.title}}</nuxt-link>
         <nuxt-link v-if="beNext" class="nextBar" :to= "{path:`/blog/archive/${nextMonth.to}`}">{{nextMonth.title}}→</nuxt-link>
       </div>
-      
     </ul>
 
     <div>
