@@ -67,7 +67,7 @@ export default {
     showBlogs:function(){
       var arrayShowBlogs=[]
       for(var i=0;i<this.blogs.length;i++){
-        if(this.blogs[i].month == "May19"){
+        if(this.blogs[i].month == "May20"){
           arrayShowBlogs.push(this.blogs[i])
         }
       }
@@ -94,7 +94,7 @@ export default {
     },
     preMonth:function(){
       for(var i=0;i<this.$store.getters['monthes'].length;i++){
-        if(this.$store.getters['monthes'][i].to=="May19"){
+        if(this.$store.getters['monthes'][i].to=="May20"){
           if(i+1<this.$store.getters['monthes'].length){
             return this.$store.getters['monthes'][i+1]
           }else{
@@ -106,7 +106,7 @@ export default {
     },
     nextMonth:function(){
       for(var i=0;i<this.$store.getters['monthes'].length;i++){
-        if(this.$store.getters['monthes'][i].to=="May19"){
+        if(this.$store.getters['monthes'][i].to=="May20"){
           if(i!=0){
             return this.$store.getters['monthes'][i-1]
           }else{
