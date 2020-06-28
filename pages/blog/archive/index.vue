@@ -1,14 +1,15 @@
 <template>
   <div>
      <div class = "title">
-      BLOG <nuxt-link  :to= "{path:`/blog/entrylist`}" class = "menu">新着</nuxt-link><nuxt-link :to= "{path:`/blog/archive`}" class = "nowMenu">月別</nuxt-link>
+      <a  style="margin-right:  10px;">BLOG</a>
+      <nuxt-link  :to= "{path:`/blog/entrylist`}" class = "menu">新着</nuxt-link>
+      <nuxt-link :to= "{path:`/blog/archive`}" class = "nowMenu">月別</nuxt-link>
     </div>
 
     <ul class="links">
-      <li v-for="info in monthes" :key="info">
-        <p>
-          <nuxt-link  class="perLink" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-        </p>
+      <li v-for="info in monthes" :key="info" style="display: inline-block">      
+        <nuxt-link  v-if="info==monthes[0]" class="nowMenu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
+        <nuxt-link  v-else class="menu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
       </li>
     </ul>
 

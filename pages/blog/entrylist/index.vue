@@ -20,7 +20,6 @@
 
     <ul  class="links">
         <li v-for="n in blogLength" :key="n" style="display: inline-block">
-
           <nuxt-link v-if="n==1"  class="nowPage"  style="margin-right:  10px;" 
              :to= "{path:`/blog/entrylist/${n}`}"
              >{{ n }}</nuxt-link>

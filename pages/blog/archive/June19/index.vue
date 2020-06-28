@@ -5,10 +5,9 @@
     </div>
 
     <ul class="links">
-      <li v-for="info in monthes" :key="info">
-        <p>
-          <nuxt-link  class="perLink" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-        </p>
+      <li v-for="info in monthes" :key="info" style="display: inline-block">      
+        <nuxt-link  v-if="info.to=='June19'" class="nowMenu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
+        <nuxt-link  v-else class="menu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
       </li>
     </ul>
 

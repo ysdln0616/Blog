@@ -25,7 +25,6 @@ body {
 .menu {
   cursor: pointer;
   color: rgb(54, 72, 94);
-  margin-left:  10px;
   margin-right:  10px;
   font-weight: 100;
   font-size: 14px;
@@ -34,7 +33,6 @@ body {
 .nowMenu {
   cursor: pointer;
   color: rgb(54, 72, 94);
-  margin-left:  10px;
   margin-right:  10px;
   font-weight: 400;
   font-size: 18px;
