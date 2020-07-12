@@ -1,48 +1,23 @@
 <template>
   <div>
-     <div class = "title">
-      <a  style="margin-right:  10px;">BLOG</a>
-      <nuxt-link  :to= "{path:`/blog/entrylist`}" class = "menu">新着</nuxt-link>
-      <nuxt-link :to= "{path:`/blog/archive`}" class = "nowMenu">月別</nuxt-link>
-    </div>
-
-    <ul class="links">
-      <li v-for="info in monthes" :key="info" style="display: inline-block">      
-        <nuxt-link  v-if="info==monthes[0]" class="nowMenu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-        <nuxt-link  v-else class="menu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-      </li>
-    </ul>
-
-    <ul  class="links">
-      <div class="new">{{monthes[0].title}}</div>
-      <li v-for="info in blogs" :key="info">
-        <div v-if="info.month==monthes[0].to">
-          <div class="border"></div>
-          <p>
-            <a  v-if="info==blogs[0]" class="new">new</a>
-            <nuxt-link   class="perLink"
-              :to= "{path:`/blog/archive/${info.month}/${info.id}`}">{{ info.title }}</nuxt-link>
-            <a class="mDate">{{ info.date }}</a>
-          </p>
+    <ul class="monthList">
+       <div class="nowMenu">ARCHIVE</div>
+      <li v-for="info in monthes" :key="info">
+        <div class="border"></div>
+        <div class="parentOfMonth">     
+          <nuxt-link  class="perLink" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
         </div>
       </li>
       <div class="border"></div>
     </ul>
-
-    <div>
-      <p class="back">
-        <nuxt-link  class="perLink" to="/">←TABLE OF CONTENTS</nuxt-link>
-      </p>
-    </div>
   </div>
-
 </template>
 
   
 <script>
 export default {
   name: "BLOG",
-  layout: 'default',
+  layout: 'Archive',
   computed: {
     blogs:function(){
       var blogs=[];
@@ -77,6 +52,35 @@ export default {
     }
   }
 }
-import '@/assets/css/profile.css'
+// import '@/assets/css/profile.css'
 </script>
+
+<style scoped>
+.nowMenu {
+  word-wrap: break-word;
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  font-weight: 100;
+  /* font-size: 24px; */
+  text-decoration: none;
+}
+.parentOfMonth{
+  text-align: center;
+  margin: 0.3em;
+}
+.monthList{
+  /* padding-top: 2em; */
+  padding-bottom: 2em;
+  list-style: none;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.perLink{
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  font-weight: 600;
+  font-size: 24px;
+  background-color: #98c7df;
+}
+</style>
 

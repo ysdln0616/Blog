@@ -1,11 +1,11 @@
 export const state = () => ({
   blogsData:[
-    {
-      title: "私の人生 enjoy!",
-      month:"June20",
-      date:'2020-06-19',
-      id:'19'
-    },
+    // {
+    //   title: "私の人生 enjoy!",
+    //   month:"June20",
+    //   date:'2020-06-19',
+    //   id:'19'
+    // },
     {
       title: "swiftris　その...?",
       month:"June20",

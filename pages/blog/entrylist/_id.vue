@@ -1,10 +1,7 @@
 <template>
   <div>
-    <div class = "title">
-      BLOG <nuxt-link  :to= "{path:`/blog/entrylist`}" class = "nowMenu">新着</nuxt-link><nuxt-link :to= "{path:`/blog/archive`}" class = "menu">月別</nuxt-link>
-    </div>
-
     <ul  class="links">
+      <div class = "nowMenu">BLOG</div>
       <li v-for="info in showBlogs" :key="info">
         <div class="border"></div>
         <p>
@@ -20,20 +17,14 @@
 
     <ul  class="links">
         <li v-for="n in blogLength" :key="n" style="display: inline-block">
-            <nuxt-link v-if="$route.params['id']==n"  class="nowPage"  style="margin-right:  10px;" 
+            <nuxt-link v-if="$route.params['id']==n"  class="nowMenu"  style="margin-right:  10px;" 
              :to= "{path:`/blog/entrylist/${n}`}"
              >{{ n }}</nuxt-link>
-             <nuxt-link v-else  class="new"  style="margin-right:  10px;" 
+             <nuxt-link v-else  class="menu"  style="margin-right:  10px;" 
              :to= "{path:`/blog/entrylist/${n}`}"
              >{{ n }}</nuxt-link>
         </li>
     </ul>
-
-    <div>
-      <p class="back">
-        <nuxt-link  class="perLink" to="/">←TABLE OF CONTENTS</nuxt-link>
-      </p>
-    </div>
   </div>
 
 </template>
@@ -42,7 +33,7 @@
 <script>
 export default {
   name: "BLOG",
-  layout: 'default',
+  layout: 'Archive',
   data(){
     return{
       num : this.$route.params['id'],
@@ -89,5 +80,32 @@ export default {
     }
   }
 }
-import '@/assets/css/profile.css'
+// import '@/assets/css/profile.css'
 </script>
+
+<style scoped>
+.nowMenu {
+  word-wrap: break-word;
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  margin-right:  10px;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 18px;
+}
+.menu {
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  margin-right:  10px;
+  font-weight: 100;
+  font-size: 18px;
+}
+.perLink{
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  font-weight: 600;
+  font-size: 24px;
+  background-color: #98c7df;
+}
+</style>
+

@@ -1,24 +1,14 @@
 <template>
   <div>
-    <div class = "title">
-      BLOG <nuxt-link  :to= "{path:`/blog/entrylist`}" class = "menu">新着</nuxt-link><nuxt-link :to= "{path:`/blog/archive`}" class = "nowMenu">月別</nuxt-link>
-    </div>
-
-    <ul class="links">
-      <li v-for="info in monthes" :key="info" style="display: inline-block">      
-        <nuxt-link  v-if="info.to=='June19'" class="nowMenu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-        <nuxt-link  v-else class="menu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-      </li>
-    </ul>
-
-    <ul  class="links">
-      <div class="new">2019年6月</div>
+    <ul  class="links">  
+      <div class="nowMenu">2019年6月</div>
       <li v-for="info in showBlogs" :key="info">
         <div class="border"></div>
         <p>
           <a  v-if="info==blogs[0]" class="new">new</a>
           <nuxt-link   class="perLink"
-           :to= "{path:`/blog/archive/${info.month}/${info.id}`}">{{ info.title }}</nuxt-link>
+           :to= "{path:`/blog/archive/${info.month}/${info.id}`}"
+           >{{ info.title }}</nuxt-link>
           <a class="mDate">{{ info.date }}</a>
         </p>
       </li>
@@ -29,11 +19,6 @@
       </div>
     </ul>
 
-    <div>
-      <p class="back">
-        <nuxt-link  class="perLink" to="/">←TABLE OF CONTENTS</nuxt-link>
-      </p>
-    </div>
   </div>
 </template>
 
@@ -41,7 +26,7 @@
 
 export default {
   name: "June19",
-  layout: 'default',
+  layout: 'Archive',
   data:function(){
     return{
       bePre:true,
@@ -112,15 +97,18 @@ export default {
           }
         }
       }
-    },
-    preBlog:function(){
-      for(var i=0;i<this.blogs.length;i++){
-        if(this.blogs[i]==this.showBlogs){
-          return this.blogs[i-1]
-        }
-      }
     }
   }
 }
-import '@/assets/css/profile.css'
 </script>
+
+
+<style scoped>
+.perLink{
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  font-weight: 600;
+  font-size: 24px;
+  background-color: #98c7df;
+}
+</style>

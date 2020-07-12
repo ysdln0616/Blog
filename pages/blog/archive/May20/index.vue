@@ -1,22 +1,11 @@
 <template>
   <div>
-     <div class = "title">
-      BLOG <nuxt-link  :to= "{path:`/blog/entrylist`}" class = "menu">新着</nuxt-link><nuxt-link :to= "{path:`/blog/archive`}" class = "nowMenu">月別</nuxt-link>
-    </div>
-
-    <ul class="links">
-      <li v-for="info in monthes" :key="info" style="display: inline-block">      
-        <nuxt-link  v-if="info.to=='May20'" class="nowMenu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-        <nuxt-link  v-else class="menu" :to= "{path:`/blog/archive/${info.to}`}" >{{ info.title }}({{info.blogCount}})</nuxt-link>
-      </li>
-    </ul>
-
-    <ul  class="links">
-      <div class="new">2020年5月</div>
+    <ul  class="links">  
+      <div class="nowMenu">2020年5月</div>
       <li v-for="info in showBlogs" :key="info">
         <div class="border"></div>
         <p>
-          <!-- <a  v-if="info==blogs[0]" class="new">new</a> -->
+          <a  v-if="info==blogs[0]" class="new">new</a>
           <nuxt-link   class="perLink"
            :to= "{path:`/blog/archive/${info.month}/${info.id}`}"
            >{{ info.title }}</nuxt-link>
@@ -27,23 +16,17 @@
       <div class="Bar">
         <nuxt-link v-if="bePre" class="preBar" :to= "{path:`/blog/archive/${preMonth.to}`}">←{{preMonth.title}}</nuxt-link>
         <nuxt-link v-if="beNext" class="nextBar" :to= "{path:`/blog/archive/${nextMonth.to}`}">{{nextMonth.title}}→</nuxt-link>
-      </div>      
+      </div>
     </ul>
 
-    <div>
-      <p class="back">
-        <nuxt-link  class="perLink" to="/">←TABLE OF CONTENTS</nuxt-link>
-      </p>
     </div>
-  </div>
-
 </template>
 
 <script>
 
 export default {
   name: "May20",
-  layout: 'default',
+  layout: 'Archive',
   data:function(){
     return{
       bePre:true,
@@ -125,5 +108,15 @@ export default {
   }
 }
 
-import '@/assets/css/profile.css'
+// import '@/assets/css/profile.css'
 </script>
+
+<style scoped>
+.perLink{
+  cursor: pointer;
+  color: rgb(54, 72, 94);
+  font-weight: 600;
+  font-size: 24px;
+  background-color: #98c7df;
+}
+</style>
