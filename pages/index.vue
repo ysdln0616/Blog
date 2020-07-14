@@ -1,7 +1,9 @@
 <template>
   <div>
     <ul class="links">
-      <div class = "nowMenu">Home</div>
+      <div class = "nowMenu">HOME</div>
+      <!-- <img class="aboutmePhoto" src="@/assets/photo/aboutme.jpeg"/> -->
+      <!-- <img class="aboutmePhoto" src="@/assets/photo/DSC03759_Original.jpeg"/> -->
       <li v-for="info in blogs" :key="info">
         <div class="border"></div>
         <p>
@@ -40,6 +42,23 @@ export default {
 </script>
 
 <style scoped>
+
+.aboutmePhoto{
+  width:  100%;
+  height: auto;
+  margin: 0;
+  opacity: 1;
+}
+
+.aboutmePhoto2{
+  width:  100%;
+  height: auto;
+  left: calc(10%);
+  margin: 0;
+  position: absolute;
+  opacity: 0;
+}
+
 .nowMenu {
   word-wrap: break-word;
   cursor: pointer;
