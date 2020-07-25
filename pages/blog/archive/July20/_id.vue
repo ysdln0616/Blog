@@ -24,6 +24,19 @@
       <h4>なんなん</h4>  
     </div>
 
+<!-- 20200723 -->
+    <div v-if="this.$route.params['id']  == '23'" class="document">
+      <h4>部屋がきれいになったのでうちのおばあちゃんが作ってくれたぬいぐるみを飾ることにしました</h4>
+      <p>
+        <img id="photo" src="@/assets/photo/IMG_9113.jpeg"
+          alt="zoe" title="zoe"/>
+      </p>
+      <h4>名前はzoeです</h4>
+      <h4>可愛いでしょ</h4>
+      <h4>うちのワンコに噛まれないように気をつけます</h4>
+    </div>
+
+
 
 <!-- ページ移動の -->
     <div class="title">

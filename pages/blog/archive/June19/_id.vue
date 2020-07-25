@@ -44,6 +44,7 @@
         来年も誕生日を迎えられたら良いですね
       </h4>
     </div>
+    
 <!-- ページ移動の -->
     <div class="title">
       <div class="border"></div>
